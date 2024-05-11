@@ -1,8 +1,8 @@
 # DevSecOps CI/CD Pipeline Project Automation Arch
-![ProjectArch](https://github.com//aajobitaiwo/security-observability-microservice/blob/zdocs/images/DevSecOps-Project-Archas.png)
+![ProjectArch](https://github.com/aajobitaiwo/security-observability-microservice/blob/main/zdocs/images/DevSecOps-Project-Archas.png)
 
 ## Continuous Observability (Monitoring & Logging) Arch
-![PromGrafEFKArch](https://github.com//aajobitaiwo/security-observability-microservice/blob/zdocs/images/prom-graf-efk.avif)
+![PromGrafEFKArch](https://github.com/aajobitaiwo/security-observability-microservice/blob/main/zdocs/images/prom-graf-efk.avif)
 
 ###### Project ToolBox 🧰
 - [Git](https://git-scm.com/) Git is a distributed version control system that helps you track changes in any set of computer files, usually used for coordinating work among developers who collaboratively develops software.
