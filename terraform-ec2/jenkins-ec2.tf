@@ -1,7 +1,13 @@
+# Data source to retrieve default VPC
+data "aws_vpc" "default" {
+  default = true
+}
+
 # Creating Security Group for the Jenkins CI instance
 resource "aws_security_group" "dynamicsg" {
   name        = "DevSecOps-Jenkins-CI-SG"
   description = "SG for Jenkins-CI"
+  vpc_id      = data.aws_vpc.default.id
 
   dynamic "ingress" {
     for_each = var.sg_ports
@@ -71,8 +77,8 @@ resource "aws_instance" "jenkins-server" {
     volume_size = 50 # 50GB storage
     volume_type = "gp2"
   }
-  
-  user_data              = <<-EOF
+
+  user_data = <<-EOF
     #!/bin/bash
     sudo apt update -y
     sudo touch /etc/apt/keyrings/adoptium.asc
